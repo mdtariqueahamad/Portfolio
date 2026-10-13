@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Tarique Ahamad — Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader-content">
+            <div class="loader-name">
+                <span class="loader-letter" style="--i:0">M</span>
+                <span class="loader-letter" style="--i:1">D</span>
+                <span class="loader-letter" style="--i:2">&nbsp;</span>
+                <span class="loader-letter" style="--i:3">T</span>
+                <span class="loader-letter" style="--i:4">A</span>
+                <span class="loader-letter" style="--i:5">R</span>
+                <span class="loader-letter" style="--i:6">I</span>
+                <span class="loader-letter" style="--i:7">Q</span>
+                <span class="loader-letter" style="--i:8">U</span>
+                <span class="loader-letter" style="--i:9">E</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-bar-fill" id="loaderBarFill"></div>
+            </div>
+            <div class="loader-tagline">Loading Portfolio...</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>MTA<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="ham-line ham-line-1"></span>
+                <span class="ham-line ham-line-2"></span>
+                <span class="ham-line ham-line-3"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <canvas class="particles-canvas" id="particlesCanvas"></canvas>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-greeting reveal-text">
+                    <span class="greeting-line"></span>
+                    <span>Hello, I'm</span>
+                </div>
+                <h1 class="hero-name glitch" data-text="MD TARIQUE AHAMAD">
+                    <span class="glitch-text" data-text="MD TARIQUE">MD TARIQUE</span>
+                    <br>
+                    <span class="glitch-text" data-text="AHAMAD">AHAMAD</span>
+                </h1>
+                <div class="hero-subtitle">
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary magnetic-btn">
+                        <span>View Projects</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="resume - Google Docs.pdf" target="_blank" download class="btn btn-secondary magnetic-btn">
+                        <span>Download CV</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                    </a>
+                </div>
+                <div class="hero-scroll-indicator">
+                    <div class="scroll-mouse">
+                        <div class="scroll-wheel"></div>
+                    </div>
+                    <span>Scroll Down</span>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-image-container" id="heroCard">
+                    <div class="hero-card-inner">
+                        <!-- Front: Portrait Image -->
+                        <div class="hero-card-front">
+                            <div class="hero-image-glow"></div>
+                            <img src="photo.png" alt="MD Tarique Ahamad" class="hero-image">
+                        </div>
+                        <!-- Back: C++ Code Window -->
+                        <div class="hero-card-back">
+                            <div class="cpp-card-window">
+                                <div class="cpp-header">
+                                    <div class="cpp-dots">
+                                        <span class="cpp-dot red"></span>
+                                        <span class="cpp-dot yellow"></span>
+                                        <span class="cpp-dot green"></span>
+                                    </div>
+                                    <div class="cpp-filename">
+                                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                                        <span>tariq.cpp</span>
+                                    </div>
+                                    <span class="cpp-badge">C++</span>
+                                </div>
+                                <div class="cpp-body">
+                                    <div class="cpp-line-numbers">
+                                        <span>1</span>
+                                        <span>2</span>
+                                        <span>3</span>
+                                        <span>4</span>
+                                        <span>5</span>
+                                        <span>6</span>
+                                        <span>7</span>
+                                        <span>8</span>
+                                        <span>9</span>
+                                        <span>10</span>
+                                        <span>11</span>
+                                    </div>
+                                    <pre class="cpp-code"><code><span class="cpp-cm">// tariq.cpp</span>
+<span class="cpp-kw">class</span> <span class="cpp-cls">about</span> {
+<span class="cpp-kw">public</span>:
+    <span class="cpp-type">string</span> <span class="cpp-var">name</span> <span class="cpp-op">=</span> <span class="cpp-str">"MD Tarique Ahamad"</span>;
+    <span class="cpp-type">string</span> <span class="cpp-var">college</span> <span class="cpp-op">=</span> <span class="cpp-str">"Bansal Inst. of Science &amp; Tech"</span>;
+    <span class="cpp-type">vector</span>&lt;<span class="cpp-type">string</span>&gt; <span class="cpp-var">skills</span> <span class="cpp-op">=</span> {
+        <span class="cpp-str">"C++"</span>, <span class="cpp-str">"Python"</span>, <span class="cpp-str">"DSA"</span>,
+        <span class="cpp-str">"FastAPI"</span>, <span class="cpp-str">"Docker"</span>, <span class="cpp-str">"Linux"</span>
+    };
+};</code></pre>
+                                </div>
+                                <div class="cpp-footer">
+                                    <span class="cpp-status"><span class="cpp-status-dot"></span> Ready</span>
+                                    <span class="cpp-hint">Hover out to view portrait</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image-ring"></div>
+                    <div class="hero-image-ring hero-image-ring-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">&lt;about&gt;</span>
+                <h2 class="section-title reveal-up">About <span class="accent">Me</span></h2>
+                <div class="section-line reveal-up"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal-left">
+                    <h3 class="about-heading">Career Objective</h3>
+                    <p class="about-paragraph">
+                        Aspiring Software Engineer driven by a passion for building scalable, high-performance systems. 
+                        I specialize in backend architecture, real-time data pipelines, and full-stack development — 
+                        from IoT edge devices to interactive 3D dashboards.
+                    </p>
+                    <p class="about-paragraph">
+                        With hands-on experience in Digital Twin platforms and data-intensive applications, 
+                        I thrive at the intersection of systems engineering and modern web technologies. 
+                        My goal is to engineer solutions that are not just functional, but elegant, robust, and built to scale.
+                    </p>
+                    <p class="about-paragraph">
+                        Currently pursuing B.Tech in Computer Science, I bring a competitive edge forged through 
+                        national-level hackathons and coding competitions, combined with a deep curiosity for 
+                        emerging technologies.
+                    </p>
+                </div>
+                <div class="about-stats reveal-right">
+                    <div class="stat-card glass-card tilt-card">
+                        <div class="stat-number" data-target="2" data-suffix="+">0</div>
+                        <div class="stat-label">Major Projects</div>
+                    </div>
+                    <div class="stat-card glass-card tilt-card">
+                        <div class="stat-number" data-target="8.47" data-decimals="2">0</div>
+                        <div class="stat-label">CGPA</div>
+                    </div>
+                    <div class="stat-card glass-card tilt-card">
+                        <div class="stat-number" data-target="600" data-suffix="+">0</div>
+                        <div class="stat-label">Teams Beaten</div>
+                    </div>
+                    <div class="stat-card glass-card tilt-card">
+                        <div class="stat-number" data-target="2800" data-suffix="+">0</div>
+                        <div class="stat-label">Participants Competed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">&lt;skills&gt;</span>
+                <h2 class="section-title reveal-up">Technical <span class="accent">Skills</span></h2>
+                <div class="section-line reveal-up"></div>
+            </div>
+            <div class="skills-grid">
+                <!-- Languages -->
+                <div class="skill-category glass-card tilt-card reveal-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill">C</span>
+                        <span class="skill-pill">C++</span>
+                        <span class="skill-pill">Python</span>
+                    </div>
+                </div>
+                <!-- Frameworks -->
+                <div class="skill-category glass-card tilt-card reveal-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <h3>Frameworks</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill">FastAPI</span>
+                        <span class="skill-pill">MQTT</span>
+                        <span class="skill-pill">Protobuf</span>
+                        <span class="skill-pill">REST APIs</span>
+                    </div>
+                </div>
+                <!-- Databases -->
+                <div class="skill-category glass-card tilt-card reveal-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                        </div>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill">MongoDB</span>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="skill-category glass-card tilt-card reveal-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Git</span>
+                        <span class="skill-pill">Docker</span>
+                        <span class="skill-pill">Linux</span>
+                        <span class="skill-pill">VS Code</span>
+                    </div>
+                </div>
+                <!-- DSA Highlight Feature Card -->
+                <div class="skill-category glass-card tilt-card reveal-up dsa-highlight-card">
+                    <div class="dsa-card-header">
+                        <div class="dsa-header-left">
+                            <div class="skill-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                            </div>
+                            <div>
+                                <h3>Data Structures & Algorithms</h3>
+                                <span class="dsa-subtitle">Competitive Programming & Algorithmic Problem Solving</span>
+                            </div>
+                        </div>
+                        <div class="dsa-footer">
+                            <a href="https://leetcode.com/u/mdtariqueahamad/" target="_blank" class="dsa-leetcode-link magnetic-btn">
+                                <span>LeetCode Profile</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dsa-stats-grid">
+                        <div class="dsa-stat-badge">
+                            <div class="dsa-stat-number" data-target="250" data-suffix="+">0</div>
+                            <div class="dsa-stat-label">LeetCode Solved</div>
+                        </div>
+                        <div class="dsa-stat-badge">
+                            <div class="dsa-stat-number" data-target="400" data-suffix="+">0</div>
+                            <div class="dsa-stat-label">Total Problems Solved</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">&lt;projects&gt;</span>
+                <h2 class="section-title reveal-up">Featured <span class="accent">Projects</span></h2>
+                <div class="section-line reveal-up"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- ANTARVIK -->
+                <div class="project-card glass-card tilt-card reveal-up">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mdtariqueahamad/ANTARVIK" target="_blank" class="project-link magnetic-btn" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            </a>
+                            <a href="https://github.com/mdtariqueahamad/ANTARVIK" target="_blank" class="project-link magnetic-btn" aria-label="External Link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-date">Sep 2026</div>
+                    <h3 class="project-title">ANTARVIK</h3>
+                    <p class="project-subtitle">Digital Twin Platform for Antarctic Station Management</p>
+                    <ul class="project-bullets">
+                        <li>Architected a real-time Digital Twin platform with interactive 3D visualization using React and Three.js, enabling remote monitoring of Antarctic research stations</li>
+                        <li>Engineered high-throughput data pipeline processing 10,000+ sensor readings/sec via MQTT with Protobuf serialization, achieving 40% bandwidth reduction</li>
+                        <li>Built event-driven backend services with FastAPI, implementing WebSocket streams for live telemetry with sub-200ms latency</li>
+                        <li>Designed MongoDB Atlas schema with time-series collections and optimized caching strategies, supporting 50+ concurrent dashboard sessions</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Three.js</span>
+                        <span class="tech-tag">MongoDB Atlas</span>
+                        <span class="tech-tag">MQTT</span>
+                        <span class="tech-tag">Protobuf</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                </div>
+                <!-- OmniBin -->
+                <div class="project-card glass-card tilt-card reveal-up">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/mdtariqueahamad/omnibintest" target="_blank" class="project-link magnetic-btn" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            </a>
+                            <a href="https://github.com/mdtariqueahamad/omnibintest" target="_blank" class="project-link magnetic-btn" aria-label="External Link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-date">May 2026</div>
+                    <h3 class="project-title">OmniBin</h3>
+                    <p class="project-subtitle">IoT & AI-Driven Smart Waste Management System</p>
+                    <ul class="project-bullets">
+                        <li>Developed an end-to-end IoT waste management platform with ESP32 sensors, FastAPI backend, and real-time Google Maps dashboard</li>
+                        <li>Implemented AI-based waste classification and dynamic route optimization, reducing collection costs by 35%</li>
+                        <li>Built RESTful APIs with MongoDB integration for real-time bin monitoring across 100+ locations with threshold-based alerts</li>
+                        <li>Designed responsive web dashboard with live fill-level visualization and predictive overflow analytics</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">ESP32</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Google Maps API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Achievements -->
+    <section class="section achievements" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">&lt;achievements&gt;</span>
+                <h2 class="section-title reveal-up">Certifications & <span class="accent">Achievements</span></h2>
+                <div class="section-line reveal-up"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-badge cert-badge">Certification</div>
+                        <h3>Python Fundamentals</h3>
+                        <p class="timeline-org">Infosys Springboard</p>
+                        <p class="timeline-date">July 2026</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-badge cert-badge">Certification</div>
+                        <h3>C++ Programming Course</h3>
+                        <p class="timeline-org">Infosys Headstart</p>
+                        <p class="timeline-date">Nov 2025</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot achievement-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-badge achievement-badge">Achievement</div>
+                        <h3>2nd Place & Team Lead</h3>
+                        <p class="timeline-org">BGI Hackathon 2026</p>
+                        <p class="timeline-detail">Competed against 600+ teams, 2800+ participants</p>
+                        <p class="timeline-date">2026</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot achievement-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-badge achievement-badge">Achievement</div>
+                        <h3>National Finalist</h3>
+                        <p class="timeline-org">CODECODE at IIT Bombay</p>
+                        <p class="timeline-date">2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">&lt;education&gt;</span>
+                <h2 class="section-title reveal-up">Education <span class="accent">Timeline</span></h2>
+                <div class="section-line reveal-up"></div>
+            </div>
+            <div class="education-grid">
+                <div class="edu-card glass-card tilt-card reveal-up">
+                    <div class="edu-year">2024 — 2028</div>
+                    <div class="edu-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
+                    </div>
+                    <h3 class="edu-title">B.Tech — Computer Science & Engineering</h3>
+                    <p class="edu-institution">Bansal Institute of Science and Technology, Bhopal</p>
+                    <div class="edu-score">
+                        <span class="edu-score-label">CGPA</span>
+                        <span class="edu-score-value">8.47</span>
+                    </div>
+                </div>
+                <div class="edu-card glass-card tilt-card reveal-up">
+                    <div class="edu-year">2023</div>
+                    <div class="edu-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                    </div>
+                    <h3 class="edu-title">Class XII — Senior Secondary</h3>
+                    <p class="edu-institution">SBS Inter College, Japla</p>
+                    <div class="edu-score">
+                        <span class="edu-score-label">Score</span>
+                        <span class="edu-score-value">84%</span>
+                    </div>
+                </div>
+                <div class="edu-card glass-card tilt-card reveal-up">
+                    <div class="edu-year">2021</div>
+                    <div class="edu-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    </div>
+                    <h3 class="edu-title">Class X — Secondary</h3>
+                    <p class="edu-institution">HSV Higher Secondary School, Japla</p>
+                    <div class="edu-score">
+                        <span class="edu-score-label">Score</span>
+                        <span class="edu-score-value">90%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">&lt;contact&gt;</span>
+                <h2 class="section-title reveal-up">Get In <span class="accent">Touch</span></h2>
+                <div class="section-line reveal-up"></div>
+                <p class="section-desc reveal-up">Have a project in mind or want to collaborate? Let's talk.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-form-wrapper reveal-left">
+                    <form class="contact-form glass-card" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="formName" class="form-input" placeholder=" " required>
+                            <label for="formName" class="form-label">Your Name</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="formEmail" class="form-input" placeholder=" " required>
+                            <label for="formEmail" class="form-label">Your Email</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="formMessage" class="form-input form-textarea" placeholder=" " required rows="5"></textarea>
+                            <label for="formMessage" class="form-label">Your Message</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary magnetic-btn form-submit">
+                            <span>Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info reveal-right">
+                    <div class="contact-info-item glass-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:mdtariqbist@gmail.com">mdtariqbist@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item glass-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+919471167379">+91 9471167379</a>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://github.com/mdtariqueahamad" target="_blank" class="social-link magnetic-btn" aria-label="GitHub">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/md-tarique-ahamad/" target="_blank" class="social-link magnetic-btn" aria-label="LinkedIn">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="https://leetcode.com/u/mdtariqueahamad/" target="_blank" class="social-link magnetic-btn" aria-label="LeetCode">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </a>
+                        <a href="mailto:mdtariqbist@gmail.com" class="social-link magnetic-btn" aria-label="Email">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span class="footer-logo"><span class="logo-bracket">&lt;</span>MTA<span class="logo-bracket">/&gt;</span></span>
+                <p>&copy; 2026 MD Tarique Ahamad. All rights reserved.</p>
+            </div>
+            <a href="#home" class="back-to-top magnetic-btn" id="backToTop" aria-label="Back to top">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

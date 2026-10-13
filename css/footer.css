@@ -1,0 +1,64 @@
+/* ============================================
+   11. FOOTER SECTION
+   ============================================ */
+
+.footer {
+    padding: 36px 0;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+}
+
+.footer-left p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.back-to-top {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--border-silver);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+}
+
+.back-to-top:hover {
+    background: #ffffff;
+    color: #0a0b0e;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .footer-left {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
